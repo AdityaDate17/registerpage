@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inputclass{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.checkclass{
+    display:flex;
+    width: 102%;
+    border: solid 2px blue;
+    height: 50px;
+    align-items: center;
+}
+.captcha{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    /* flex: 1;  */
+    /* display: flex; */
+}
+
+.termcondition{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px
+}
+
+.box {
+    width: 56%;
+    flex-shrink: 0;
+  }
+  
+  .box img {
+    padding-left: 110px;
+    width: 20%;
+    height: 13%;
+    object-fit: contain
+  }
+  
+.termsclass{
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.container1{
+        text-align: left;
+}
+.container2{
+    text-align: left;
+}
+.password-input {
+    position: relative;
+}
+.password-input1{
+    position: relative;
+}
+
+.toggle-password {
+    margin-top: -4px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

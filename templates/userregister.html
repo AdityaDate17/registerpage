@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="static/css/register.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration</h2>
+        <form class="registrationForm" method="POST" action="/userregister" enctype="multipart/form-data" name="myform" onsubmit="return validateform()">
+            <!-- Partner Type Dropdown -->
+            <label for="partnerType">Partner Type:</label>
+            <select id="partnerType" name="partnerType" class="inputclass">
+                <option value="individual">Individual</option>
+                <option value="company">Company</option>
+            </select>
+
+            <!-- Name Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="inputclass">
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="inputclass">
+
+            <!-- Mobile Number Input -->
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" class="inputclass">
+
+            <!-- PAN Number Input -->
+            <label for="pan">PAN No:</label>
+            <input type="text" id="pan" name="pan" class="inputclass">
+
+            <!-- Pin Code Input -->
+            <label for="pinCode">Pin Code:</label>
+            <input type="number" id="pinCode" name="pinCode" class="inputclass">
+
+            <!-- KYC Input -->
+            <label for="kyc">KYC (PAN or Company PAN):</label>
+            <input type="text" id="kyc" name="kyc" class="inputclass">
+
+            <!-- File Upload for KYC Documents -->
+            <label for="upload">Upload KYC Documents:</label>
+            <input type="file" id="upload" name="upload" accept=".pdf, .jpg, .jpeg, .png" class="inputclass">
+
+            <!-- Password Input -->
+            <div class="container1">
+                <label for="password">Password:</label>
+                <div class="password-input">
+                    <input type="text" id="password" name="password" class="inputclass">
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+                </div>
+                
+            </div>
+            
+
+            <!-- Confirm Password Input -->
+            <div class="container2">
+                <label for="confirmPassword">Confirm Password:</label>
+                <div class="password-input1">
+                    <input type="text" id="confirmPassword" name="confirmPassword" class="inputclass">
+                    <span class="toggle-password" onclick="togglePasswordVisibility1()">👁️</span>
+                </div>
+            </div>
+        
+            <!-- Captcha Input (Replace with actual captcha implementation) -->
+            <div class="checkclass">
+                <input type="checkbox" id="captcha" name="captcha">
+                <label for="captcha" class="captcha">I'm not a robot</label>
+                    <div class="box box1">
+                        <img src="data:image/png;base64,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" alt="Captcha Image">
+                    </div>
+            </div>
+            
+            <!-- Terms and Conditions Checkbox -->
+            <div class="termsclass">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms" class="termcondition">I agree to the terms and conditions</label>
+            </div>
+            
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit" class="inputclass"></button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="static/js/register.js"></script>
+</body>
+</html>
