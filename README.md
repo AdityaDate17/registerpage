@@ -13,3 +13,6 @@ After successful Registration :
 Field Validation : 
 ![Screenshot (211)](https://github.com/AdityaDate17/registerpage/assets/121174472/9e2af2af-ddfe-4d5e-abbb-6f04de559bc5)
 
+Database :
+
+
