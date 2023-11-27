@@ -6,3 +6,6 @@ RegisterPage in Python
 𝐓𝐞𝐜𝐡 𝐒𝐭𝐚𝐜𝐤 : Frontend : Html,Css,Javascript, Backend : Python(Flask) , Database : MYSQL
 
 ![Screenshot (209)](https://github.com/AdityaDate17/registerpage/assets/121174472/fd1a079f-7169-485e-92a0-a948bb5fb9d1)
+
+After successful Registration : 
+
