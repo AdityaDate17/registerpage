@@ -9,3 +9,6 @@ RegisterPage in Python
 
 After successful Registration : 
 ![Screenshot (210)](https://github.com/AdityaDate17/registerpage/assets/121174472/71c9d4f6-b271-4de1-87d8-749f9ba2b951)
+
+Field Validation : 
+![Screenshot (210)](https://github.com/AdityaDate17/registerpage/assets/121174472/71c9d4f6-b271-4de1-87d8-749f9ba2b951)
